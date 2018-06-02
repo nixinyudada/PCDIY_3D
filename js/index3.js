@@ -24,13 +24,12 @@ window.onload = function(){
 
 
     var solidCSS = `
-    .video_card > div,.cpu > div,.fan > div,.power > div,.panel > div,.SSD > div,.HHD > div,.CD > div{
+    .video_card > div,.cpu > div,.fan > div,.power > div,.panel_3D > div,.SSD > div,.HHD > div,.CD > div{
             width: 100%;
             height: 100%;
             border: 1px deepskyblue dashed;
             position: absolute;
             text-align: center;
-            line-height: 60px;
             font-family: "微软雅黑 Light";
             color: red;
             text-shadow: 5px 0 10px gold;
@@ -38,53 +37,41 @@ window.onload = function(){
     `
 
     var imgCSS = `
-    .video_card > div,.cpu > div,.fan > div,.power > div,.panel > div,.SSD > div,.HHD > div,.CD > div{
-            width: 100%;
-            height: 100%;
+    .video_card > div,.cpu > div,.fan > div,.power > div,.panel_3D > div,.SSD > div,.HHD > div,.CD > div{
             border:none;
-            position: absolute;
-            text-align: center;
-            line-height: 60px;
-            font-family: "微软雅黑 Light";
-            color: red;
-            text-shadow: 5px 0 10px gold;
         }
     `
-
-
-
-
     document.getElementById("ill").onclick = function(){
         if(dom_obj.cpu.style.visibility == "visible"){
-            dom_obj.cpu.innerHTML = insert(["img/cpu.jpg","CPU"]);
+            dom_obj.cpu.innerHTML = insert(["img/cpu.jpg",""]);
             lightning(dom_obj.cpu)
         }
         if(dom_obj.power.style.visibility == "visible"){
-            dom_obj.power.innerHTML = insert(["img/power.jpg","POWER"])
+            dom_obj.power.innerHTML = insert(["img/power.jpg",""])
             lightning(dom_obj.power)
         }
         if(dom_obj.fan.style.visibility == "visible"){
-            dom_obj.fan.innerHTML = insert(["img/fan.jpg","FAN"])
+            dom_obj.fan.innerHTML = insert(["img/fan.jpg",""])
             lightning(dom_obj.fan)
         }
         if(dom_obj.video_card.style.visibility == "visible"){
-            dom_obj.video_card.innerHTML = insert(["img/Vcard.jpg","Video_CARD"])
+            dom_obj.video_card.innerHTML = insert(["img/Vcard.jpg",""])
             lightning(dom_obj.video_card)
         }
         if(dom_obj.ssd.style.visibility == "visible"){
-            dom_obj.ssd.innerHTML = insert(["img/SSD.jpg","SSD"])
+            dom_obj.ssd.innerHTML = insert(["img/SSD.jpg",""])
             lightning(dom_obj.ssd)
         }
         if(dom_obj.hhd.style.visibility == "visible"){
-            dom_obj.hhd.innerHTML = insert(["img/HHD.jpg","HHD"])
+            dom_obj.hhd.innerHTML = insert(["img/HHD.jpg",""])
             lightning(dom_obj.hhd)
         }
         if(dom_obj.cd.style.visibility == "visible"){
-            dom_obj.cd.innerHTML = insert(["img/CD.jpg","CD"])
+            dom_obj.cd.innerHTML = insert(["img/CD.jpg",""])
             lightning(dom_obj.cd)
         }
         if(dom_obj.panel.style.visibility == "visible"){
-            dom_obj.panel.innerHTML = insert(["img/panel.png","PANEL"])
+            dom_obj.panel.innerHTML = insert(["img/panel.png",""])
             lightning(dom_obj.panel)
         }
     }
@@ -109,12 +96,12 @@ window.onload = function(){
 
         }else if(args[1] != null && args[1] != ""){
             document.getElementById("styCSS").innerHTML += solidCSS;
-            return `<div>`+args[1]+`</div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>`;
+            return `<div><marquee direction=left scrollamount=3 onmouseover="this.stop()" onmouseout="this.start()">`+args[1]+`</marquee></div>
+                <div><marquee direction=right scrollamount=3 onmouseover="this.stop()" onmouseout="this.start()">`+args[1]+`</marquee></div>
+                <div><marquee direction=left scrollamount=3 onmouseover="this.stop()" onmouseout="this.start()">`+args[1]+`</marquee></div>
+                <div><marquee direction=right scrollamount=3 onmouseover="this.stop()" onmouseout="this.start()">`+args[1]+`</marquee></div>
+                <div><marquee direction=left scrollamount=3 onmouseover="this.stop()" onmouseout="this.start()">`+args[1]+`</marquee></div>
+                <div><marquee direction=right scrollamount=3 onmouseover="this.stop()" onmouseout="this.start()">`+args[1]+`</marquee></div>`;
         }
         return `<div></div>
                 <div></div>
@@ -148,31 +135,31 @@ window.onload = function(){
                 lightning(dom_obj.cpu)
                 break;
             case "POWER":
-                dom_obj.power.innerHTML = insert(["","POWER"])
+                dom_obj.power.innerHTML = insert(["","电源"])
                 lightning(dom_obj.power)
                 break;
             case "FAN":
-                dom_obj.fan.innerHTML = insert(["","FAN"])
+                dom_obj.fan.innerHTML = insert(["","风扇"])
                 lightning(dom_obj.fan)
                 break;
             case "Video_CARD":
-                dom_obj.video_card.innerHTML = insert(["","Video_CARD"])
+                dom_obj.video_card.innerHTML = insert(["","显卡"])
                 lightning(dom_obj.video_card)
                 break;
             case "SSD":
-                dom_obj.ssd.innerHTML = insert(["","SSD"])
+                dom_obj.ssd.innerHTML = insert(["","固态硬盘"])
                 lightning(dom_obj.ssd)
                 break;
             case "HHD":
-                dom_obj.hhd.innerHTML = insert(["","HHD"])
+                dom_obj.hhd.innerHTML = insert(["","机械硬盘"])
                 lightning(dom_obj.hhd)
                 break;
             case "CD":
-                dom_obj.cd.innerHTML = insert(["","CD"])
+                dom_obj.cd.innerHTML = insert(["","刻录机"])
                 lightning(dom_obj.cd)
                 break;
             case "PANEL":
-                dom_obj.panel.innerHTML = insert(["","PANEL"])
+                dom_obj.panel.innerHTML = insert(["","主面板"])
                 lightning(dom_obj.panel)
                 break;
         }

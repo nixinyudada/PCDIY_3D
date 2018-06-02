@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>计算机组成原理（学龄前）^_^</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/index2.css" rel="stylesheet">
-    <style id="styCSS"></style>
+    <link href="css/index3.css" rel="stylesheet">
+    <style id="styCSS">
+
+    </style>
 </head>
 <body>
-<h1>计算机组成原理（学龄前）</h1>
+<h3>计算机组成原理（学龄前）</h3>
 <div class="container">
-    <div class="rightBox col-md-6">
-        <div class="PC" id="pc_container">
-            <div class="cpu" id="cpu_container" style="visibility: hidden">
+    <div class="leftBox col-md-6">
+        <div class="PC container" id="pc_container">
+            <div class="cpu col-md-offset-1 col-md-4" id="cpu_container" style="visibility: hidden;">
                 <div><img draggable="false" style="width: 100%;height: 100%;" src="img/cpu.jpg" alt=""></div>
                 <div><img draggable="false" style="width: 100%;height: 100%;" src="img/cpu.jpg" alt=""></div>
                 <div><img draggable="false" style="width: 100%;height: 100%;" src="img/cpu.jpg" alt=""></div>
@@ -57,47 +59,54 @@
             </div>
         </div>
     </div>
-    <div class="leftBox col-md-4 col-md-offset-1">
+
+    <div class="hidden-md hidden-lg">
+        <br><br>
+        <h3>&nbsp;&nbsp;&nbsp;控制台</h3>
+        <hr>
+    </div>
+
+    <div class="rightBox col-md-4 col-md-offset-1">
         <p>
-            <input type="text" value="CPU">
-            <button name="add">+</button>
+            <input type="text" disabled class="form-control" value="CPU">
+            <button name="add" class="btn btn-info">+</button>
         </p>
         <p>
-            <input type="text" value="POWER">
-            <button name="add">+</button>
+            <input type="text" disabled class="form-control" value="POWER">
+            <button name="add" class="btn btn-info">+</button>
         </p>
         <p>
-            <input type="text" value="FAN">
-            <button name="add">+</button>
+            <input type="text" disabled class="form-control" value="FAN">
+            <button name="add" class="btn btn-info">+</button>
         </p>
         <p>
-            <input type="text" value="Video_CARD">
-            <button name="add">+</button>
+            <input type="text" disabled class="form-control" value="Video_CARD">
+            <button name="add" class="btn btn-info">+</button>
         </p>
         <p>
-            <input type="text" value="SSD">
-            <button name="add">+</button>
+            <input type="text" disabled class="form-control" value="SSD">
+            <button name="add" class="btn btn-info">+</button>
         </p>
         <p>
-            <input type="text" value="HHD">
-            <button name="add">+</button>
+            <input type="text" disabled class="form-control" value="HHD">
+            <button name="add" class="btn btn-info">+</button>
         </p>
         <p>
-            <input type="text" value="CD">
-            <button name="add">+</button>
+            <input type="text" disabled class="form-control" value="CD">
+            <button name="add" class="btn btn-info">+</button>
         </p>
         <p>
-            <input type="text" value="PANEL">
-            <button name="add">+</button>
+            <input type="text" disabled class="form-control" value="PANEL">
+            <button name="add" class="btn btn-info">+</button>
         </p>
 
         <br>
         <br>
-            <button id="ill">I like illustrator!</button>
+        <button id="ill" class="btn btn-info">I like illustrator!</button>
     </div>
 
 </div>
 
-<script src="js/index2.js"></script>
+<script src="js/index3.js"></script>
 </body>
 </html>
